@@ -1,0 +1,12 @@
+{
+  "cxxNamespace": ["in-app-browser"],
+  "ios": {
+    "iosModulename": "NitroInAppBrowser"
+  },
+  "android": {
+    "androidNamespace": ["in-app-browser"],
+    "androidCxxLibName": "NitroInAppBrowser"
+  },
+  "autolinking": {},
+  "ignorePaths": ["node_modules"]
+}
