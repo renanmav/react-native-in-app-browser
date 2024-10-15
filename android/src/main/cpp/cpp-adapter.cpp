@@ -3,5 +3,5 @@
 
 JNIEXPORT jint JNICALL JNI_OnLoad(JavaVM *vm, void *)
 {
-  return renanmav::inappbrowser::NitroInAppBrowser::initialize(vm);
+  return margelo::nitro::inappbrowser::initialize(vm);
 }

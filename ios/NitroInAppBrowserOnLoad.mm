@@ -2,7 +2,7 @@
 //  NitroInAppBrowserOnLoad.mm
 //  NitroInAppBrowser
 //
-//  Created by Renan Mav on 14.10.24.
+//  Created by Marc Rousavy on 22.07.24.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,7 +13,7 @@
 
 @implementation NitroInAppBrowserOnLoad
 
-using namespace renanmav::inappbrowser;
+using namespace margelo::nitro;
 
 + (void)load {
   // TODO: Register all Swift Hybrid Objects here
