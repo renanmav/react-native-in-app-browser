@@ -1,6 +1,13 @@
-# react-native-nitro-template
+# react-native-in-app-browser
 
-This is a template for Nitro Modules.
+An in-app-browser module for react-native exposing bindings for WKWebView and SFSafariViewController, powered by Nitro.
+
+## Docs
+
+- https://developer.apple.com/documentation/webkit/wkwebview
+- https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller
+
+<!-- [DOCS FROM NITRO TEMPLATE]
 
 ## Usage
 
@@ -36,3 +43,5 @@ Contribute a change to this template to update it for newer React Native version
   2. Adds all of your `.swift` or `.cpp` files (implementations).
   3. Adds all Nitrogen files (`add_nitrogen_files(s)`)
 - [`package.json`](package.json): The npm package.json file. `react-native-nitro-modules` should be a `peerDependency`.
+
+-->
