@@ -1,6 +1,6 @@
 # react-native-in-app-browser
 
-An in-app-browser module for react-native exposing bindings for WKWebView and SFSafariViewController, powered by Nitro.
+An in-app-browser module for react-native exposing bindings for WKWebView and SFSafariViewController, powered by Nitro Modules.
 
 ## Docs
 
