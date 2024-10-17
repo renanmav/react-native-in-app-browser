@@ -20,7 +20,7 @@ import {
 
 import { Colors, Header } from 'react-native/Libraries/NewAppScreen'
 
-import { HybridSFSafariViewController } from 'react-native-in-app-browser'
+import { SFSafariViewController } from 'react-native-in-app-browser'
 
 type SectionProps = PropsWithChildren<{
   title: string
@@ -81,7 +81,7 @@ function App(): React.JSX.Element {
             <Button
               title="present('https://www.google.com')"
               onPress={() => {
-                HybridSFSafariViewController.present('https://www.google.com')
+                SFSafariViewController.present('https://www.google.com')
               }}
             />
           </Section>

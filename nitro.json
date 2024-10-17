@@ -7,6 +7,10 @@
     "androidNamespace": ["inappbrowser"],
     "androidCxxLibName": "NitroInAppBrowser"
   },
-  "autolinking": {},
+  "autolinking": {
+    "SFSafariViewController": {
+      "swift": "HybridSFSafariViewController"
+    }
+  },
   "ignorePaths": ["node_modules"]
 }
