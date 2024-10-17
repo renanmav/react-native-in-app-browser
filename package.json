@@ -33,7 +33,13 @@
     "typescript": "tsc --noEmit false",
     "specs": "bun run --filter=\"**\" typescript && bun nitro-codegen --logLevel=\"debug\""
   },
-  "keywords": ["react-native", "in-app-browser", "nitro", "WKWebView", "SFSafariViewController"],
+  "keywords": [
+    "react-native",
+    "in-app-browser",
+    "nitro",
+    "WKWebView",
+    "SFSafariViewController"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/renanmav/react-native-in-app-browser.git"
@@ -67,8 +73,13 @@
   },
   "eslintConfig": {
     "root": true,
-    "extends": ["@react-native", "prettier"],
-    "plugins": ["prettier"],
+    "extends": [
+      "@react-native",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
     "rules": {
       "prettier/prettier": [
         "warn",
@@ -82,7 +93,10 @@
       ]
     }
   },
-  "eslintIgnore": ["node_modules/", "lib/"],
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
   "prettier": {
     "quoteProps": "consistent",
     "singleQuote": true,
@@ -90,5 +104,6 @@
     "trailingComma": "es5",
     "useTabs": false,
     "semi": false
-  }
+  },
+  "packageManager": "bun@1.1.30"
 }
