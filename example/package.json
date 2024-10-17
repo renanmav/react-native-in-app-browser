@@ -8,12 +8,13 @@
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest",
-    "pods": "cd ios && pod install && rm -rf .xcode.env.local"
+    "pods": "cd ios && pod install",
+    "postinstall": "rm -rf ./node_modules/react-native-in-app-browser/example && rm -rf ./node_modules/react-native-in-app-browser/node_modules"
   },
   "dependencies": {
     "react": "18.3.1",
     "react-native": "0.75.4",
-    "react-native-in-app-browser": "link:../",
+    "react-native-in-app-browser": "file:../",
     "react-native-nitro-modules": "*"
   },
   "devDependencies": {
