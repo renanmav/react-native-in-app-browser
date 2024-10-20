@@ -23,6 +23,7 @@ int initialize(JavaVM* vm) {
   return facebook::jni::initialize(vm, [] {
     // Register native JNI methods
     margelo::nitro::inappbrowser::JHybridSFSafariViewControllerSpec::registerNatives();
+    margelo::nitro::inappbrowser::JHybridSFSafariViewControllerSpec::registerNatives();
 
     // Register Nitro Hybrid Objects
     

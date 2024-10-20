@@ -13,9 +13,10 @@
 #error NitroModules cannot be found! Are you sure you installed NitroModules properly?
 #endif
 
+// Forward declaration of `SFSafariViewControllerPresentParams` to properly resolve imports.
+namespace margelo::nitro::inappbrowser { struct SFSafariViewControllerPresentParams; }
 
-
-#include <string>
+#include "SFSafariViewControllerPresentParams.hpp"
 
 namespace margelo::nitro::inappbrowser {
 
@@ -48,7 +49,7 @@ namespace margelo::nitro::inappbrowser {
 
     public:
       // Methods
-      virtual void present(const std::string& url) = 0;
+      virtual void present(const SFSafariViewControllerPresentParams& params) = 0;
       virtual void dismiss() = 0;
 
     protected:

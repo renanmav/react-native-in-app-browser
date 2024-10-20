@@ -28,7 +28,9 @@ target_sources(
   ../nitrogen/generated/android/NitroInAppBrowserOnLoad.cpp
   # Shared Nitrogen C++ sources
   ../nitrogen/generated/shared/c++/HybridSFSafariViewControllerSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridSFSafariViewControllerSpec.cpp
   # Android-specific Nitrogen C++ sources
+  ../nitrogen/generated/android/c++/JHybridSFSafariViewControllerSpec.cpp
   ../nitrogen/generated/android/c++/JHybridSFSafariViewControllerSpec.cpp
 )
 

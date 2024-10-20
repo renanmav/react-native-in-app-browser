@@ -8,14 +8,25 @@ class HybridSFSafariViewController: HybridSFSafariViewControllerSpec {
     return getSizeOf(self)
   }
   
-  func present(url: String) throws -> Void {
-    NSLog("HybridSFSafariViewController.present(url:%@) is being called", url)
+  func present(params: SFSafariViewControllerPresentParams) throws -> Void {
+    NSLog("HybridSFSafariViewController.present(url:%@) is being called", params.url)
     
-    guard let nativeUrl = URL(string: url) else {
+    guard let nativeUrl = URL(string: params.url) else {
       throw NSError(domain: "HybridSFSafariViewController", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])
     }
     
     let safariViewController = SFSafariViewController(url: nativeUrl)
+    
+    let style: UIModalPresentationStyle
+    switch params.modalPresentationStyle {
+    case .fullscreen:
+      style = .fullScreen
+    case .pagesheet:
+      style = .pageSheet
+    default:
+      style = .automatic
+    }
+    safariViewController.modalPresentationStyle = style
     
     DispatchQueue.main.async {
       if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,

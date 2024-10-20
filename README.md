@@ -4,8 +4,8 @@ An in-app-browser module for react-native exposing bindings for WKWebView and SF
 
 ## Docs
 
-- https://developer.apple.com/documentation/webkit/wkwebview
 - https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller
+- https://developer.apple.com/documentation/webkit/wkwebview
 
 <!-- [DOCS FROM NITRO TEMPLATE]
 

@@ -10,10 +10,17 @@
 // Forward declarations of C++ defined types
 // Forward declaration of `HybridSFSafariViewControllerSpec` to properly resolve imports.
 namespace margelo::nitro::inappbrowser { class HybridSFSafariViewControllerSpec; }
+// Forward declaration of `ModalPresentationStyle` to properly resolve imports.
+namespace margelo::nitro::inappbrowser { enum class ModalPresentationStyle; }
+// Forward declaration of `SFSafariViewControllerPresentParams` to properly resolve imports.
+namespace margelo::nitro::inappbrowser { struct SFSafariViewControllerPresentParams; }
 
 // Include C++ defined types
 #include "HybridSFSafariViewControllerSpec.hpp"
+#include "ModalPresentationStyle.hpp"
+#include "SFSafariViewControllerPresentParams.hpp"
 #include <memory>
+#include <optional>
 #include <string>
 
 // C++ helpers for Swift

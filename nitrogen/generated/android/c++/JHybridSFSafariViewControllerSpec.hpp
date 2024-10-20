@@ -45,7 +45,7 @@ namespace margelo::nitro::inappbrowser {
 
   public:
     // Methods
-    void present(const std::string& url) override;
+    void present(const SFSafariViewControllerPresentParams& params) override;
     void dismiss() override;
 
   private:

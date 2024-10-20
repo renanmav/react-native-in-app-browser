@@ -20,7 +20,10 @@ import {
 
 import { Colors, Header } from 'react-native/Libraries/NewAppScreen'
 
-import { SFSafariViewController } from 'react-native-in-app-browser'
+import {
+  ModalPresentationStyle,
+  SFSafariViewController,
+} from 'react-native-in-app-browser'
 
 type SectionProps = PropsWithChildren<{
   title: string
@@ -81,7 +84,10 @@ function App(): React.JSX.Element {
             <Button
               title="present('https://www.google.com')"
               onPress={() => {
-                SFSafariViewController.present('https://www.google.com')
+                SFSafariViewController.present({
+                  url: 'https://www.google.com',
+                  modalPresentationStyle: ModalPresentationStyle.PageSheet,
+                })
               }}
             />
           </Section>

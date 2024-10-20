@@ -7,9 +7,17 @@
 
 #include "JHybridSFSafariViewControllerSpec.hpp"
 
+// Forward declaration of `SFSafariViewControllerPresentParams` to properly resolve imports.
+namespace margelo::nitro::inappbrowser { struct SFSafariViewControllerPresentParams; }
+// Forward declaration of `ModalPresentationStyle` to properly resolve imports.
+namespace margelo::nitro::inappbrowser { enum class ModalPresentationStyle; }
 
-
+#include "SFSafariViewControllerPresentParams.hpp"
+#include "JSFSafariViewControllerPresentParams.hpp"
 #include <string>
+#include <optional>
+#include "ModalPresentationStyle.hpp"
+#include "JModalPresentationStyle.hpp"
 
 namespace margelo::nitro::inappbrowser {
 
@@ -32,9 +40,9 @@ namespace margelo::nitro::inappbrowser {
   
 
   // Methods
-  void JHybridSFSafariViewControllerSpec::present(const std::string& url) {
-    static const auto method = _javaPart->getClass()->getMethod<void(jni::alias_ref<jni::JString> /* url */)>("present");
-    method(_javaPart, jni::make_jstring(url));
+  void JHybridSFSafariViewControllerSpec::present(const SFSafariViewControllerPresentParams& params) {
+    static const auto method = _javaPart->getClass()->getMethod<void(jni::alias_ref<JSFSafariViewControllerPresentParams> /* params */)>("present");
+    method(_javaPart, JSFSafariViewControllerPresentParams::fromCpp(params));
   }
   void JHybridSFSafariViewControllerSpec::dismiss() {
     static const auto method = _javaPart->getClass()->getMethod<void()>("dismiss");

@@ -32,7 +32,7 @@ public protocol HybridSFSafariViewControllerSpec: AnyObject, HybridObjectSpec {
   
 
   // Methods
-  func present(url: String) throws -> Void
+  func present(params: SFSafariViewControllerPresentParams) throws -> Void
   func dismiss() throws -> Void
 }
 

@@ -43,7 +43,7 @@ abstract class HybridSFSafariViewControllerSpec: HybridObject() {
   // Methods
   @DoNotStrip
   @Keep
-  abstract fun present(url: String): Unit
+  abstract fun present(params: SFSafariViewControllerPresentParams): Unit
   
   @DoNotStrip
   @Keep

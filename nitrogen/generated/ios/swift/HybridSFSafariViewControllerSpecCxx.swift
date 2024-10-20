@@ -75,9 +75,9 @@ public class HybridSFSafariViewControllerSpecCxx {
 
   // Methods
   @inline(__always)
-  public func present(url: std.string) -> Void {
+  public func present(params: SFSafariViewControllerPresentParams) -> Void {
     do {
-      try self.implementation.present(url: String(url))
+      try self.implementation.present(params: params)
       return 
     } catch {
       let message = "\(error.localizedDescription)"

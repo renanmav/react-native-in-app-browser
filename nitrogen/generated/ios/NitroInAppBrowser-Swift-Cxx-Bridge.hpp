@@ -8,10 +8,16 @@
 #pragma once
 
 // Forward declarations of C++ defined types
-
+// Forward declaration of `ModalPresentationStyle` to properly resolve imports.
+namespace margelo::nitro::inappbrowser { enum class ModalPresentationStyle; }
 
 // Include C++ defined types
-
+#if __has_include("ModalPresentationStyle.hpp")
+ #include "ModalPresentationStyle.hpp"
+#endif
+#if __has_include(<optional>)
+ #include <optional>
+#endif
 
 /**
  * Contains specialized versions of C++ templated types so they can be accessed from Swift,
@@ -19,6 +25,12 @@
  */
 namespace margelo::nitro::inappbrowser::bridge::swift {
 
-  
+  /**
+   * Specialized version of `std::optional<ModalPresentationStyle>`.
+   */
+  using std__optional_ModalPresentationStyle_ = std::optional<ModalPresentationStyle>;
+  inline std::optional<ModalPresentationStyle> create_std__optional_ModalPresentationStyle_(const ModalPresentationStyle& value) {
+    return std::optional<ModalPresentationStyle>(value);
+  }
 
 } // namespace margelo::nitro::inappbrowser::bridge::swift

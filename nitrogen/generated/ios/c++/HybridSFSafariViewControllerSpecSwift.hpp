@@ -12,9 +12,15 @@
 // Forward declaration of `HybridSFSafariViewControllerSpecCxx` to properly resolve imports.
 namespace NitroInAppBrowser { class HybridSFSafariViewControllerSpecCxx; }
 
+// Forward declaration of `SFSafariViewControllerPresentParams` to properly resolve imports.
+namespace margelo::nitro::inappbrowser { struct SFSafariViewControllerPresentParams; }
+// Forward declaration of `ModalPresentationStyle` to properly resolve imports.
+namespace margelo::nitro::inappbrowser { enum class ModalPresentationStyle; }
 
-
+#include "SFSafariViewControllerPresentParams.hpp"
 #include <string>
+#include <optional>
+#include "ModalPresentationStyle.hpp"
 
 #if __has_include(<NitroModules/HybridContext.hpp>)
 #include <NitroModules/HybridContext.hpp>
@@ -59,8 +65,8 @@ namespace margelo::nitro::inappbrowser {
 
   public:
     // Methods
-    inline void present(const std::string& url) override {
-      _swiftPart.present(url);
+    inline void present(const SFSafariViewControllerPresentParams& params) override {
+      _swiftPart.present(params);
     }
     inline void dismiss() override {
       _swiftPart.dismiss();
