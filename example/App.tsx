@@ -81,7 +81,7 @@ function App(): React.JSX.Element {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}
         >
-          <Section title="SFSafariViewController">
+          <Section title="🍎 SFSafariViewController">
             <Button
               title="present('https://www.google.com')"
               onPress={() => {
@@ -103,7 +103,7 @@ function App(): React.JSX.Element {
               }}
             />
           </Section>
-          <Section title="ChromeCustomTabs">
+          <Section title="🤖 ChromeCustomTabs">
             <Button
               title="launch('https://www.google.com')"
               onPress={() => {
