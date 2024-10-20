@@ -126,5 +126,8 @@ dependencies {
 
   // Add a dependency on NitroModules
   implementation project(":react-native-nitro-modules")
+
+  // Add a dependency on androidx.browser for Custom Tabs
+  implementation 'androidx.browser:browser:1.8.0'
 }
 
