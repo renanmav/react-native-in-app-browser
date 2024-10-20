@@ -23,6 +23,7 @@ import { Colors, Header } from 'react-native/Libraries/NewAppScreen'
 import {
   ModalPresentationStyle,
   SFSafariViewController,
+  ChromeCustomTabs,
 } from 'react-native-in-app-browser'
 
 type SectionProps = PropsWithChildren<{
@@ -99,6 +100,14 @@ function App(): React.JSX.Element {
                 setTimeout(() => {
                   SFSafariViewController.dismiss()
                 }, 5000)
+              }}
+            />
+          </Section>
+          <Section title="ChromeCustomTabs">
+            <Button
+              title="launch('https://www.google.com')"
+              onPress={() => {
+                ChromeCustomTabs.launch({ url: 'https://www.google.com' })
               }}
             />
           </Section>

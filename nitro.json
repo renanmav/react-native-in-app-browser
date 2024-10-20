@@ -10,6 +10,9 @@
   "autolinking": {
     "SFSafariViewController": {
       "swift": "HybridSFSafariViewController"
+    },
+    "ChromeCustomTabs": {
+      "kotlin": "HybridChromeCustomTabs"
     }
   },
   "ignorePaths": ["node_modules"]

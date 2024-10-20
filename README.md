@@ -6,6 +6,8 @@ An in-app-browser (IAB) module for react-native exposing bindings for [SFSafariV
 
 - https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller
 - https://developer.apple.com/documentation/webkit/wkwebview
+- https://developer.chrome.com/docs/android/custom-tabs
+- https://github.com/GoogleChrome/android-browser-helper/tree/main/demos/custom-tabs-example-app
 
 <!-- [DOCS FROM NITRO TEMPLATE]
 

@@ -27,10 +27,11 @@ target_sources(
   # Autolinking Setup
   ../nitrogen/generated/android/NitroInAppBrowserOnLoad.cpp
   # Shared Nitrogen C++ sources
+  ../nitrogen/generated/shared/c++/HybridChromeCustomTabsSpec.cpp
   ../nitrogen/generated/shared/c++/HybridSFSafariViewControllerSpec.cpp
   ../nitrogen/generated/shared/c++/HybridSFSafariViewControllerSpec.cpp
   # Android-specific Nitrogen C++ sources
-  
+  ../nitrogen/generated/android/c++/JHybridChromeCustomTabsSpec.cpp
 )
 
 # Add all libraries required by the generated specs
