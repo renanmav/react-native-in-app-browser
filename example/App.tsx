@@ -77,7 +77,7 @@ function App(): React.JSX.Element {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}
         >
-          <Section title="Test SFSafariViewController">
+          <Section title="SFSafariViewController">
             <Button
               title="present('https://www.google.com')"
               onPress={() => {

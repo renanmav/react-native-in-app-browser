@@ -9,7 +9,7 @@
     "start": "react-native start",
     "test": "jest",
     "pods": "cd ios && pod install",
-    "postinstall": "rm -rf ./node_modules/react-native-in-app-browser/example && rm -rf ./node_modules/react-native-in-app-browser/node_modules"
+    "postinstall": "./scripts/postinstall.sh"
   },
   "dependencies": {
     "react": "18.3.1",
