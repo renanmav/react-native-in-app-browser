@@ -30,8 +30,7 @@ target_sources(
   ../nitrogen/generated/shared/c++/HybridSFSafariViewControllerSpec.cpp
   ../nitrogen/generated/shared/c++/HybridSFSafariViewControllerSpec.cpp
   # Android-specific Nitrogen C++ sources
-  ../nitrogen/generated/android/c++/JHybridSFSafariViewControllerSpec.cpp
-  ../nitrogen/generated/android/c++/JHybridSFSafariViewControllerSpec.cpp
+  
 )
 
 # Add all libraries required by the generated specs

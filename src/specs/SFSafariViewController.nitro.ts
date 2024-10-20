@@ -15,8 +15,7 @@ export interface SFSafariViewControllerPresentParams {
   modalPresentationStyle?: ModalPresentationStyle
 }
 
-export interface SFSafariViewController
-  extends HybridObject<{ ios: 'swift'; android: 'kotlin' }> {
+export interface SFSafariViewController extends HybridObject<{ ios: 'swift' }> {
   present(params: SFSafariViewControllerPresentParams): void
   dismiss(): void
 }
