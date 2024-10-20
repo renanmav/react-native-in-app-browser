@@ -90,6 +90,17 @@ function App(): React.JSX.Element {
                 })
               }}
             />
+            <Button
+              title="present() & dismiss() after 5s"
+              onPress={() => {
+                SFSafariViewController.present({
+                  url: 'https://www.google.com',
+                })
+                setTimeout(() => {
+                  SFSafariViewController.dismiss()
+                }, 5000)
+              }}
+            />
           </Section>
         </View>
       </ScrollView>
