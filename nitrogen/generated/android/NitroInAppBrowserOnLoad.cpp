@@ -24,6 +24,7 @@ int initialize(JavaVM* vm) {
   return facebook::jni::initialize(vm, [] {
     // Register native JNI methods
     margelo::nitro::inappbrowser::JHybridChromeCustomTabsSpec::registerNatives();
+    margelo::nitro::inappbrowser::JHybridChromeCustomTabsSpec::registerNatives();
 
     // Register Nitro Hybrid Objects
     HybridObjectRegistry::registerHybridObjectConstructor(

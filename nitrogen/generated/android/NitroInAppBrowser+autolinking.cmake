@@ -29,8 +29,10 @@ target_sources(
   # Shared Nitrogen C++ sources
   ../nitrogen/generated/shared/c++/HybridChromeCustomTabsSpec.cpp
   ../nitrogen/generated/shared/c++/HybridSFSafariViewControllerSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridChromeCustomTabsSpec.cpp
   ../nitrogen/generated/shared/c++/HybridSFSafariViewControllerSpec.cpp
   # Android-specific Nitrogen C++ sources
+  ../nitrogen/generated/android/c++/JHybridChromeCustomTabsSpec.cpp
   ../nitrogen/generated/android/c++/JHybridChromeCustomTabsSpec.cpp
 )
 
