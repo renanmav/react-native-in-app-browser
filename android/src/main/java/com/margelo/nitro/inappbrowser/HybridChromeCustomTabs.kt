@@ -3,12 +3,17 @@ package com.margelo.nitro.inappbrowser
 import android.net.Uri
 import android.util.Log
 import androidx.browser.customtabs.CustomTabsIntent
-import com.facebook.react.bridge.ReactApplicationContext
+import com.margelo.nitro.NitroModules
 
-class HybridChromeCustomTabs(private val reactContext: ReactApplicationContext) : HybridChromeCustomTabsSpec() {
+class HybridChromeCustomTabs : HybridChromeCustomTabsSpec() {
   companion object {
     const val TAG = "HybridChromeCustomTabs"
   }
+
+  override val memorySize: Long
+    get() = 0L
+
+  private val applicationContext = NitroModules.applicationContext
 
   override fun launch(params: ChromeCustomTabsLaunchParams) {
     Log.d(TAG, "launch: ${params.url}")
@@ -16,7 +21,7 @@ class HybridChromeCustomTabs(private val reactContext: ReactApplicationContext) 
     val customTabsIntent = CustomTabsIntent.Builder().build()
 
     try {
-      val context = reactContext.currentActivity ?: reactContext
+      val context = applicationContext?.currentActivity
       if (context == null) {
         Log.e(TAG, "Error launching Custom Tab: Context is null")
         return
@@ -33,7 +38,4 @@ class HybridChromeCustomTabs(private val reactContext: ReactApplicationContext) 
       Log.e(TAG, "Error launching Custom Tab: ${e.message}", e)
     }
   }
-
-  override val memorySize: Long
-    get() = 0L
 }
