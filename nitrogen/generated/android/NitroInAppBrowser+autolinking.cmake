@@ -27,8 +27,10 @@ target_sources(
   # Autolinking Setup
   ../nitrogen/generated/android/NitroInAppBrowserOnLoad.cpp
   # Shared Nitrogen C++ sources
+  ../nitrogen/generated/shared/c++/HybridASWebAuthenticationSessionSpec.cpp
   ../nitrogen/generated/shared/c++/HybridChromeCustomTabsSpec.cpp
   ../nitrogen/generated/shared/c++/HybridSFSafariViewControllerSpec.cpp
+  ../nitrogen/generated/shared/c++/HybridASWebAuthenticationSessionSpec.cpp
   ../nitrogen/generated/shared/c++/HybridChromeCustomTabsSpec.cpp
   ../nitrogen/generated/shared/c++/HybridSFSafariViewControllerSpec.cpp
   # Android-specific Nitrogen C++ sources

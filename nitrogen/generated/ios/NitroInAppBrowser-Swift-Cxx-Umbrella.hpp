@@ -8,8 +8,12 @@
 #pragma once
 
 // Forward declarations of C++ defined types
+// Forward declaration of `ASWebAuthenticationSessionStartParams` to properly resolve imports.
+namespace margelo::nitro::inappbrowser { struct ASWebAuthenticationSessionStartParams; }
 // Forward declaration of `ChromeCustomTabsLaunchParams` to properly resolve imports.
 namespace margelo::nitro::inappbrowser { struct ChromeCustomTabsLaunchParams; }
+// Forward declaration of `HybridASWebAuthenticationSessionSpec` to properly resolve imports.
+namespace margelo::nitro::inappbrowser { class HybridASWebAuthenticationSessionSpec; }
 // Forward declaration of `HybridChromeCustomTabsSpec` to properly resolve imports.
 namespace margelo::nitro::inappbrowser { class HybridChromeCustomTabsSpec; }
 // Forward declaration of `HybridSFSafariViewControllerSpec` to properly resolve imports.
@@ -20,7 +24,9 @@ namespace margelo::nitro::inappbrowser { enum class ModalPresentationStyle; }
 namespace margelo::nitro::inappbrowser { struct SFSafariViewControllerPresentParams; }
 
 // Include C++ defined types
+#include "ASWebAuthenticationSessionStartParams.hpp"
 #include "ChromeCustomTabsLaunchParams.hpp"
+#include "HybridASWebAuthenticationSessionSpec.hpp"
 #include "HybridChromeCustomTabsSpec.hpp"
 #include "HybridSFSafariViewControllerSpec.hpp"
 #include "ModalPresentationStyle.hpp"
@@ -39,6 +45,8 @@ namespace margelo::nitro::inappbrowser { struct SFSafariViewControllerPresentPar
 #include <NitroModules/PromiseHolder.hpp>
 
 // Forward declarations of Swift defined types
+// Forward declaration of `HybridASWebAuthenticationSessionSpecCxx` to properly resolve imports.
+namespace NitroInAppBrowser { class HybridASWebAuthenticationSessionSpecCxx; }
 // Forward declaration of `HybridChromeCustomTabsSpecCxx` to properly resolve imports.
 namespace NitroInAppBrowser { class HybridChromeCustomTabsSpecCxx; }
 // Forward declaration of `HybridSFSafariViewControllerSpecCxx` to properly resolve imports.
