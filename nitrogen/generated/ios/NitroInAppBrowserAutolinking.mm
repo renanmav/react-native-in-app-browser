@@ -11,6 +11,7 @@
 #import <type_traits>
 
 #include "HybridSFSafariViewControllerSpecSwift.hpp"
+#include "HybridASWebAuthenticationSessionSpecSwift.hpp"
 
 @interface NitroInAppBrowserAutolinking : NSObject
 @end
@@ -26,6 +27,13 @@
     []() -> std::shared_ptr<HybridObject> {
       auto swiftPart = NitroInAppBrowser::NitroInAppBrowserAutolinking::createSFSafariViewController();
       return std::make_shared<HybridSFSafariViewControllerSpecSwift>(swiftPart);
+    }
+  );
+  HybridObjectRegistry::registerHybridObjectConstructor(
+    "ASWebAuthenticationSession",
+    []() -> std::shared_ptr<HybridObject> {
+      auto swiftPart = NitroInAppBrowser::NitroInAppBrowserAutolinking::createASWebAuthenticationSession();
+      return std::make_shared<HybridASWebAuthenticationSessionSpecSwift>(swiftPart);
     }
   );
 }

@@ -24,6 +24,7 @@ import {
   InAppBrowser,
   SFSafariViewController,
   ModalPresentationStyle,
+  ASWebAuthenticationSession,
   ChromeCustomTabs,
 } from 'react-native-in-app-browser'
 
@@ -60,6 +61,7 @@ function Section({ children, title }: SectionProps): React.JSX.Element {
 }
 
 const URL = 'https://reactnative.dev'
+const AUTH_URL = 'https://github.com/login'
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark'
@@ -111,6 +113,16 @@ function App(): React.JSX.Element {
                 setTimeout(() => {
                   SFSafariViewController.dismiss()
                 }, 5000)
+              }}
+            />
+          </Section>
+          <Section title="🍎 ASWebAuthenticationSession">
+            <Button
+              title={`start(${AUTH_URL})`}
+              onPress={() => {
+                ASWebAuthenticationSession.start({
+                  url: AUTH_URL,
+                })
               }}
             />
           </Section>

@@ -11,6 +11,9 @@
     "SFSafariViewController": {
       "swift": "HybridSFSafariViewController"
     },
+    "ASWebAuthenticationSession": {
+      "swift": "HybridASWebAuthenticationSession"
+    },
     "ChromeCustomTabs": {
       "kotlin": "HybridChromeCustomTabs"
     }
