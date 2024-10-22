@@ -13,7 +13,7 @@
         "assets": [
           "CHANGELOG.md",
           "package.json",
-          "package-lock.json"
+          "bun.lockb"
         ],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
