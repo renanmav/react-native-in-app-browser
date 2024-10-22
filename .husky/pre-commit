@@ -3,3 +3,5 @@ bun run lint
 
 # TODO: setup tests, including /example ones
 # bun run test
+
+git add .
