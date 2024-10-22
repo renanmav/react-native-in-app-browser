@@ -21,8 +21,9 @@ import {
 import { Colors, Header } from 'react-native/Libraries/NewAppScreen'
 
 import {
-  ModalPresentationStyle,
+  InAppBrowser,
   SFSafariViewController,
+  ModalPresentationStyle,
   ChromeCustomTabs,
 } from 'react-native-in-app-browser'
 
@@ -58,6 +59,8 @@ function Section({ children, title }: SectionProps): React.JSX.Element {
   )
 }
 
+const URL = 'https://reactnative.dev'
+
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark'
 
@@ -81,12 +84,20 @@ function App(): React.JSX.Element {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}
         >
+          <Section title="🌐 InAppBrowser">
+            <Button
+              title={`open(${URL})`}
+              onPress={() => {
+                InAppBrowser.open(URL)
+              }}
+            />
+          </Section>
           <Section title="🍎 SFSafariViewController">
             <Button
-              title="present('https://www.google.com')"
+              title={`present(${URL})`}
               onPress={() => {
                 SFSafariViewController.present({
-                  url: 'https://www.google.com',
+                  url: URL,
                   modalPresentationStyle: ModalPresentationStyle.PageSheet,
                 })
               }}
@@ -95,7 +106,7 @@ function App(): React.JSX.Element {
               title="present() & dismiss() after 5s"
               onPress={() => {
                 SFSafariViewController.present({
-                  url: 'https://www.google.com',
+                  url: URL,
                 })
                 setTimeout(() => {
                   SFSafariViewController.dismiss()
@@ -105,9 +116,9 @@ function App(): React.JSX.Element {
           </Section>
           <Section title="🤖 ChromeCustomTabs">
             <Button
-              title="launch('https://www.google.com')"
+              title={`launch(${URL})`}
               onPress={() => {
-                ChromeCustomTabs.launch({ url: 'https://www.google.com' })
+                ChromeCustomTabs.launch({ url: URL })
               }}
             />
           </Section>
