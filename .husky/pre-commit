@@ -1,0 +1,4 @@
+bun run sort-package-json
+
+# TODO: setup tests
+# bun run test
