@@ -1,2 +1,12 @@
-example
-node_modules
+# Exclude all top-level hidden directories by convention
+/.*/
+
+__mocks__
+__tests__
+
+/node_modules
+/example
+
+/android/src/androidTest/
+/android/src/test/
+/android/build/
