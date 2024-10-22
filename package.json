@@ -1,6 +1,6 @@
 {
   "name": "@renanmav/react-native-in-app-browser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "In app browser module for react-native using SFSafariViewController, WKWebView & more, powered by Nitro",
   "keywords": [
     "react-native",
@@ -26,9 +26,6 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc --noEmit false",
-    "bump:major": "npm version major",
-    "bump:minor": "npm version minor",
-    "bump:patch": "npm version patch",
     "clean": "rm -rf android/build node_modules/**/android/build lib",
     "postinstall": "bun run build || exit 0;",
     "lint": "eslint .",
