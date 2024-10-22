@@ -1,4 +1,5 @@
 bun run sort-package-json
+bun run lint
 
-# TODO: setup tests
+# TODO: setup tests, including /example ones
 # bun run test
