@@ -14,8 +14,6 @@ namespace margelo::nitro::inappbrowser {
     HybridObject::loadHybridMethods();
     // load custom methods/properties
     registerHybrids(this, [](Prototype& prototype) {
-      prototype.registerHybridGetter("canStart", &HybridASWebAuthenticationSessionSpec::getCanStart);
-      prototype.registerHybridSetter("canStart", &HybridASWebAuthenticationSessionSpec::setCanStart);
       prototype.registerHybridGetter("prefersEphemeralWebBrowserSession", &HybridASWebAuthenticationSessionSpec::getPrefersEphemeralWebBrowserSession);
       prototype.registerHybridSetter("prefersEphemeralWebBrowserSession", &HybridASWebAuthenticationSessionSpec::setPrefersEphemeralWebBrowserSession);
       prototype.registerHybridMethod("start", &HybridASWebAuthenticationSessionSpec::start);

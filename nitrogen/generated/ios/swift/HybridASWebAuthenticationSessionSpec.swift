@@ -29,7 +29,6 @@ import NitroModules
  */
 public protocol HybridASWebAuthenticationSessionSpec: AnyObject, HybridObjectSpec {
   // Properties
-  var canStart: Bool { get set }
   var prefersEphemeralWebBrowserSession: Bool { get set }
 
   // Methods

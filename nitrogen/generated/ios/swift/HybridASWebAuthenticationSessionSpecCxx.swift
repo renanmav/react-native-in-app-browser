@@ -71,17 +71,6 @@ public class HybridASWebAuthenticationSessionSpecCxx {
   }
 
   // Properties
-  public var canStart: Bool {
-    @inline(__always)
-    get {
-      return self.implementation.canStart
-    }
-    @inline(__always)
-    set {
-      self.implementation.canStart = newValue
-    }
-  }
-  
   public var prefersEphemeralWebBrowserSession: Bool {
     @inline(__always)
     get {

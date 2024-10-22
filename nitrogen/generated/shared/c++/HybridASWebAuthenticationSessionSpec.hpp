@@ -45,8 +45,6 @@ namespace margelo::nitro::inappbrowser {
 
     public:
       // Properties
-      virtual bool getCanStart() = 0;
-      virtual void setCanStart(bool canStart) = 0;
       virtual bool getPrefersEphemeralWebBrowserSession() = 0;
       virtual void setPrefersEphemeralWebBrowserSession(bool prefersEphemeralWebBrowserSession) = 0;
 

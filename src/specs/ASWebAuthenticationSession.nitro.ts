@@ -4,7 +4,6 @@ export interface ASWebAuthenticationSession
   extends HybridObject<{ ios: 'swift' }> {
   start(params: ASWebAuthenticationSessionStartParams): void
   cancel(): void
-  canStart: boolean
   prefersEphemeralWebBrowserSession: boolean
 }
 

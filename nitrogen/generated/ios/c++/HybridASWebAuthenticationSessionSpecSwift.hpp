@@ -57,12 +57,6 @@ namespace margelo::nitro::inappbrowser {
 
   public:
     // Properties
-    inline bool getCanStart() noexcept override {
-      return _swiftPart.getCanStart();
-    }
-    inline void setCanStart(bool canStart) noexcept override {
-      _swiftPart.setCanStart(std::forward<decltype(canStart)>(canStart));
-    }
     inline bool getPrefersEphemeralWebBrowserSession() noexcept override {
       return _swiftPart.getPrefersEphemeralWebBrowserSession();
     }
