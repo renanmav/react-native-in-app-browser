@@ -1,13 +1,6 @@
 # react-native-in-app-browser
 
-An in-app-browser (IAB) module for react-native exposing bindings for [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller), [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) & more, powered by [Nitro Modules](https://nitro.margelo.com).
-
-## Docs
-
-- https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller
-- https://developer.apple.com/documentation/webkit/wkwebview
-- https://developer.chrome.com/docs/android/custom-tabs
-- https://github.com/GoogleChrome/android-browser-helper/tree/main/demos/custom-tabs-example-app
+An in-app-browser (IAB) module for react-native exposing bindings for [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller), [Chrome Custom Tabs](https://developer.chrome.com/docs/android/custom-tabs) & more, powered by [Nitro Modules](https://nitro.margelo.com).
 
 <!-- [DOCS FROM NITRO TEMPLATE]
 
