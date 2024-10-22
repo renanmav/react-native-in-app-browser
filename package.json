@@ -1,5 +1,5 @@
 {
-  "name": "react-native-in-app-browser",
+  "name": "@renanmav/react-native-in-app-browser",
   "version": "0.0.1",
   "description": "In app browser module for react-native using SFSafariViewController, WKWebView & more, powered by Nitro",
   "main": "lib/index",
