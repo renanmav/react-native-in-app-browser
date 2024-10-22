@@ -62,8 +62,5 @@
     "react-native": "*",
     "react-native-nitro-modules": "*"
   },
-  "packageManager": "bun@1.1.30",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  }
+  "packageManager": "bun@1.1.30"
 }
