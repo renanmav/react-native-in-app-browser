@@ -122,6 +122,7 @@ function App(): React.JSX.Element {
               onPress={() => {
                 ASWebAuthenticationSession.start({
                   url: AUTH_URL,
+                  callbackURLScheme: 'nitro-in-app-browser-example',
                 })
               }}
             />

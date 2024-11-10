@@ -1,4 +1,5 @@
 {
   "name": "NitroInAppBrowserExample",
-  "displayName": "NitroInAppBrowserExample"
+  "displayName": "NitroInAppBrowserExample",
+  "scheme": "nitro-in-app-browser-example"
 }

@@ -18,8 +18,8 @@ public extension ASWebAuthenticationSessionStartParams {
   /**
    * Create a new instance of `ASWebAuthenticationSessionStartParams`.
    */
-  init(url: String) {
-    self.init(std.string(url))
+  init(url: String, callbackURLScheme: String) {
+    self.init(std.string(url), std.string(callbackURLScheme))
   }
 
   var url: String {
@@ -30,6 +30,17 @@ public extension ASWebAuthenticationSessionStartParams {
     @inline(__always)
     set {
       self.__url = std.string(newValue)
+    }
+  }
+  
+  var callbackURLScheme: String {
+    @inline(__always)
+    get {
+      return String(self.__callbackURLScheme)
+    }
+    @inline(__always)
+    set {
+      self.__callbackURLScheme = std.string(newValue)
     }
   }
 }

@@ -4,6 +4,13 @@ import type { ASWebAuthenticationSession as ASWebAuthenticationSessionType } fro
 
 export * from './specs/ASWebAuthenticationSession.nitro'
 
+/**
+ * ASWebAuthenticationSession
+ * A session that an app uses to authenticate a user through a web service.
+ *
+ * @platform ios
+ * @docs https://developer.apple.com/documentation/authenticationservices/aswebauthenticationsession
+ */
 let ASWebAuthenticationSession: ASWebAuthenticationSessionType
 
 const ASWebAuthenticationSessionStub: ASWebAuthenticationSessionType = {

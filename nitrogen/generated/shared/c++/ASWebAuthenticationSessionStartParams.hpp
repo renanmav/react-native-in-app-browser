@@ -30,9 +30,10 @@ namespace margelo::nitro::inappbrowser {
   struct ASWebAuthenticationSessionStartParams {
   public:
     std::string url     SWIFT_PRIVATE;
+    std::string callbackURLScheme     SWIFT_PRIVATE;
 
   public:
-    explicit ASWebAuthenticationSessionStartParams(std::string url): url(url) {}
+    explicit ASWebAuthenticationSessionStartParams(std::string url, std::string callbackURLScheme): url(url), callbackURLScheme(callbackURLScheme) {}
   };
 
 } // namespace margelo::nitro::inappbrowser
@@ -47,12 +48,14 @@ namespace margelo::nitro {
     static inline ASWebAuthenticationSessionStartParams fromJSI(jsi::Runtime& runtime, const jsi::Value& arg) {
       jsi::Object obj = arg.asObject(runtime);
       return ASWebAuthenticationSessionStartParams(
-        JSIConverter<std::string>::fromJSI(runtime, obj.getProperty(runtime, "url"))
+        JSIConverter<std::string>::fromJSI(runtime, obj.getProperty(runtime, "url")),
+        JSIConverter<std::string>::fromJSI(runtime, obj.getProperty(runtime, "callbackURLScheme"))
       );
     }
     static inline jsi::Value toJSI(jsi::Runtime& runtime, const ASWebAuthenticationSessionStartParams& arg) {
       jsi::Object obj(runtime);
       obj.setProperty(runtime, "url", JSIConverter<std::string>::toJSI(runtime, arg.url));
+      obj.setProperty(runtime, "callbackURLScheme", JSIConverter<std::string>::toJSI(runtime, arg.callbackURLScheme));
       return obj;
     }
     static inline bool canConvert(jsi::Runtime& runtime, const jsi::Value& value) {
@@ -61,6 +64,7 @@ namespace margelo::nitro {
       }
       jsi::Object obj = value.getObject(runtime);
       if (!JSIConverter<std::string>::canConvert(runtime, obj.getProperty(runtime, "url"))) return false;
+      if (!JSIConverter<std::string>::canConvert(runtime, obj.getProperty(runtime, "callbackURLScheme"))) return false;
       return true;
     }
   };

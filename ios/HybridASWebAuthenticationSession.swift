@@ -1,7 +1,7 @@
 import Foundation
 import AuthenticationServices
 
-class HybridASWebAuthenticationSession: HybridASWebAuthenticationSessionSpec {
+class HybridASWebAuthenticationSession: NSObject, HybridASWebAuthenticationSessionSpec, ASWebAuthenticationPresentationContextProviding {
   var hybridContext = margelo.nitro.HybridContext()
   
   var memorySize: Int {
@@ -12,6 +12,11 @@ class HybridASWebAuthenticationSession: HybridASWebAuthenticationSessionSpec {
   
   var prefersEphemeralWebBrowserSession: Bool = false
   
+  func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+    let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene
+    return scene?.windows.first ?? UIWindow()
+  }
+  
   func start(params: ASWebAuthenticationSessionStartParams) throws -> Void {
     NSLog("HybridASWebAuthenticationSession.start(url:%@) is being called", params.url)
     
@@ -19,7 +24,7 @@ class HybridASWebAuthenticationSession: HybridASWebAuthenticationSessionSpec {
       throw NSError(domain: "HybridASWebAuthenticationSession", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])
     }
     
-    authSession = ASWebAuthenticationSession(url: nativeUrl, callbackURLScheme: nil) { session, error in
+    authSession = ASWebAuthenticationSession(url: nativeUrl, callbackURLScheme: params.callbackURLScheme) { session, error in
       if let error = error {
         NSLog("ASWebAuthenticationSession failed with error: %@", error.localizedDescription)
         // TODO: Implement error handling and callback to JavaScript
@@ -33,6 +38,8 @@ class HybridASWebAuthenticationSession: HybridASWebAuthenticationSessionSpec {
       
       self.authSession = nil
     }
+    
+    authSession?.presentationContextProvider = self
     
     if !(authSession?.start() ?? false) {
       throw NSError(domain: "HybridASWebAuthenticationSession", code: 1, userInfo: [NSLocalizedDescriptionKey: "ASWebAuthenticationSession failed to start"])

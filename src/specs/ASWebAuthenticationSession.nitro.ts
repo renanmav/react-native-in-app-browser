@@ -8,5 +8,16 @@ export interface ASWebAuthenticationSession
 }
 
 export interface ASWebAuthenticationSessionStartParams {
+  /**
+   * The URL to load in the authentication session.
+   *
+   * Example: `https://example.com/auth`
+   */
   url: string
+  /**
+   * The URL scheme to use for the callback.
+   *
+   * Example: `my-scheme`
+   */
+  callbackURLScheme: string
 }
